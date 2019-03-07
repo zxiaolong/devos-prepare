@@ -1,0 +1,11 @@
+# server ssh
+Host server<ip>
+    HostName <ip>
+    IdentityFile ~/.ssh/<ssh-key>.id_rsa
+    User <user>
+
+# <github user> github
+Host <github user>.github.com
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/<ssh-key>.id_rsa
