@@ -1,0 +1,20 @@
+function set_alias()
+{
+    # common alias
+    alias ll='ls -l'
+    alias lh="ls -lha"
+    alias ssh='ssh -A'
+
+    alias ff="find -name"
+    alias gp="grep -rn"
+    
+    # openwrt alias
+    alias makeq="make -j24"
+    alias maked="make -j1 V=s"
+
+    # tmux alias
+    alias tmuxs="tmux list-sessions"
+    alias tmuxt="tmux attach -t"
+}
+
+set_alias

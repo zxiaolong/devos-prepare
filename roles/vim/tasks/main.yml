@@ -1,0 +1,19 @@
+- name: Install vim 
+  become: true
+  become_method: sudo
+  apt:
+    name: vim
+
+- name: Install VundleVim
+  git:
+    repo: "https://github.com/VundleVim/Vundle.vim.git"  
+    dest: "~/.vim/bundle/Vundle.vim"
+
+- name: Config Plugins
+  copy:
+    src: vimrc
+    dest: ~/.vimrc
+
+- name: Intall Plugins
+  shell: "vim +PluginInstall +qall" 
+

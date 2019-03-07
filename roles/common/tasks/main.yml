@@ -1,0 +1,24 @@
+- name: Add Ansible repositories
+  apt_repository:
+    repo={{ item }}
+  with_items:
+    - "ppa:ansible/ansible"
+
+- name: apt-get vim etc
+  become: true
+  apt:
+    name: "{{ item }}"
+    force: yes
+  with_items:
+    - vim
+    - git
+    - ansible
+    - tmux
+  tags: [common]
+
+# Validate the sudoers file before saving
+#- lineinfile:
+#    path: /etc/sudoers.d/zxiaolong
+#    state: present
+#    line: 'zxiaolong ALL=(ALL) NOPASSWD: ALL'
+#    validate: '/usr/sbin/visudo -cf %s'

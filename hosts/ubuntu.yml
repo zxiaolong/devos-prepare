@@ -1,0 +1,2 @@
+[dev-ubuntu]
+192.168.42.131 ansible_connection=ssh ansible_user=zxiaolong ansible_ssh_pass=123456 ansible_sudo_pass=123456

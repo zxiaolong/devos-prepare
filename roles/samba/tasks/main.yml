@@ -1,0 +1,20 @@
+---
+- name: Install samba
+  become: true
+  become_method: sudo
+  apt: "name={{ item }} state=present"
+  with_items:
+    - samba
+    - samba-common
+    - python-glade2
+    - system-config-samba
+
+- name: Ensure Samba is running
+  service: "name=smbd state=started enabled=yes"
+
+- name: Add samba user
+  vars:
+    value: "{{ lookup('file','samba-user') }}"
+  become: true
+  become_method: sudo
+  shell: echo "{{ value }}" >> /etc/samba/smb.conf; smbpasswd -a ubuntu -n

@@ -1,0 +1,4 @@
+[ubuntu]
+  comment = ubuntu
+  path = /home/ubuntu
+  writable = yes

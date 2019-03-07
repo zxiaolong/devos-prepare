@@ -1,0 +1,10 @@
+- name: Install tmux
+  become: true
+  become_method: sudo
+  apt:
+    name: tmux
+
+- name: Config tmux
+  copy:
+    src: tmux.conf
+    dest: ~/.tmux.conf

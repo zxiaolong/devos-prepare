@@ -1,0 +1,4 @@
+- hosts: localhost
+  tasks:
+    - name: playbook example
+      shell: echo "playbook example" >> ~/test.txt
