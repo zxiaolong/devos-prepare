@@ -9,8 +9,8 @@ setup_tmux() {
 echo "function: setup_bashrc"
 setup_bashrc() {
     cat bashrc >> ~/.bashrc
-    cp bashrc.d ~/ -rf
-    mv ~/bashrc.d ~/.bashrc.d
+    mkdir -p ~/.bashrc.d
+    cp bashrc.d/* ~/.bashrc.d
     
 }
 
