@@ -7,4 +7,7 @@ alias gitls="git config --list"
 alias gitbc="git branch -a"
 alias gitbch="git branch -a"
 alias gitdf="git diff"
+alias gitlogv="git log -p"
+alias gitlogs="git log --stat"
+alias gitloga="git log --format=fuller"
 
