@@ -1,0 +1,10 @@
+{
+    "server":"jp1-sta38.eg2rz.pw",
+    "server_port":47295,
+    "local_address": "127.0.0.1",
+    "local_port":1080,
+    "password":"YW55RrrA2h7B",
+    "timeout":300,
+    "method":"chacha20-ietf-poly1305",
+    "fast_open": false
+}
