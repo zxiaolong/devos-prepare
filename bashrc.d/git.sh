@@ -11,3 +11,4 @@ alias gitlogv="git log -p"
 alias gitlogs="git log --stat"
 alias gitloga="git log --format=fuller"
 
+alias gitexport="echo 'git archive --format=tar.gz <branch> > branch.tar.gz'"
