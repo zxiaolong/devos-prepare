@@ -1,0 +1,30 @@
+
+set number
+syntax on
+" syntax enable
+
+set showmode  " Show the current mode
+set t_Co=256  " If under tty, use 256
+set background=dark
+" set colorscheme after t_Co
+colorscheme  molokai  
+
+" .sh file auto add header
+function HeaderBash()
+    call setline(1, "#!/bin/bash")
+    call append(1,  "# " . strftime('%Y-%m-%d', localtime()))
+    normal G
+    normal o
+endf
+autocmd bufnewfile *.sh call HeaderBash()
+
+"
+nmap <leader>l :set list!<CR>
+
+" plugins
+" NERDTree
+map <F3> :NERDTreeToggle<CR>
+
+"ctags
+map <F4> :Tlist<CR>
+nmap <F8> <Esc>:!ctags -R *<CR>
