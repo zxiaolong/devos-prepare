@@ -1,10 +1,41 @@
+set nu  " Set the line number
+syntax on  " Syntax highlighting
+"set autochdir  " Set the current dir as thr work dir
+filetype on  " File type detection
+filetype plugin on  " Loading the plugin files for specific file types
+filetype indent on  " Loading the indent file for specific file types with
 
-set number
-syntax on
-" syntax enable
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
+set cursorline
+
+" Tab and Indent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set smarttab
+"set expandtab  " Use the space to instead of tab
+set autoindent  " Copy indent from current line when starting a new line
+set smartindent
+set cindent
+
+" Seach and Match
+set hlsearch  " Highlight the search result
+set incsearch  " Real-time search
+set ignorecase
+set smartcase
+set showmatch  " When a bracket is inserted, briefly jump to the matching one
+
+" Display
 set showmode  " Show the current mode
 set t_Co=256  " If under tty, use 256
+
+" Display tab and trail space
+set list
+set listchars=tab:>-,trail:.
+" Not display above list
+nmap <leader>l :set list!<CR>
+
 set background=dark
 " set colorscheme after t_Co
 colorscheme  molokai  
@@ -28,3 +59,8 @@ map <F3> :NERDTreeToggle<CR>
 "ctags
 map <F4> :Tlist<CR>
 nmap <F8> <Esc>:!ctags -R *<CR>
+
+" airline
+let g:airline#extensions#tabline#enabled=1 "顶部tab显示"
+nmap <tab> :bn<cr> "设置tab键映射"
+

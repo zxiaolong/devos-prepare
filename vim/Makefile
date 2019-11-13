@@ -33,7 +33,9 @@ taglist:
 	@unzip ./plugs/taglist_46.zip -d ~/.vim/
 
 vimairline:
-	@unzip ./plugs/vim-airline-0.11.zip -d ~/.vim/
+	@unzip ./plugs/vim-airline-0.11.zip
+	@cp -a vim-airline-0.11/* ~/.vim/
+	@rm vim-airline-0.11 -rf
 
 winmanager:
 	@unzip ./plugs/winmanager.zip -d ~/.vim/
