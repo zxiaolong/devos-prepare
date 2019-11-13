@@ -2,14 +2,17 @@
 
 all: vimrc vimplugs
 
-vimplugs: molokai nerdtree taglist vimairline winmanager cscope
+vimplugs: molokai nerdtree taglist vimairline winmanager cscope ctrlp avim
 
 ColorSamplerPack:
 	@unzip ./plugs/ColorSamplerPack.zip -d ~/.vim/
 	
 csupport:
 	@unzip ./plugs/c-support.zip -d ~/.vim/
-	
+
+avim:
+	@cp -a ./plugs/a.vim ~/.vim/plugin/
+
 ctrlp:
 	@unzip ./plugs/ctrlp.zip -d ~/.vim/
 
