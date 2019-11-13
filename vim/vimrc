@@ -64,3 +64,8 @@ nmap <F8> <Esc>:!ctags -R *<CR>
 let g:airline#extensions#tabline#enabled=1 "顶部tab显示"
 nmap <tab> :bn<cr> "设置tab键映射"
 
+" win manager
+let g:winManagerWindowLayout='FileExplorer|TagList'
+nmap wm :WMToggle<cr>
+map <silent> <F7> :WMToggle<cr>
+
