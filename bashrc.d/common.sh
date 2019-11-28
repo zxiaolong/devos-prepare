@@ -30,9 +30,9 @@ alias maked="make -j1 V=s"
 
 # tmux
 alias tmuxl="tmux list-sessions"
-alias tmuxt="tmux attach -t"
-alias tmuxn="tmux new -s"
-alias tmuxa="tmux a"
+alias tmuxt="tmux -2 attach -t"
+alias tmuxn="tmux -2 new -s"
+alias tmuxa="tmux -2 a"
 
 #tree
 alias tree="tree --charset ASCII -L 2"
