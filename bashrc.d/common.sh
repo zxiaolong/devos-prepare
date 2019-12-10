@@ -1,4 +1,5 @@
 # common
+alias sl="ls"
 alias ff="find -name"
 alias gp="grep -rn"
 
